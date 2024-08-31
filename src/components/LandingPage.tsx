@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { UploadButton } from "@uploadthing/react";
 import { OurFileRouter } from "@/app/api/uploadthing/core";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import Image from "next/image";
 
 const LandingPage = () => {
   const { isLoaded, isSignedIn, user } = useUser();
@@ -103,7 +104,8 @@ const LandingPage = () => {
                     <p><strong>File Size:</strong> {(uploadedFile.size / 1024 / 1024).toFixed(2)} MB</p>
                     <p><strong>File Type:</strong> {uploadedFile.type}</p>
                     <div className="mt-4">
-                      <iframe
+                      <Image
+                        alt="Uploaded Resume"
                         src={uploadedFile.url}
                         className="w-full h-[70vh]"
                         title="Uploaded Resume"

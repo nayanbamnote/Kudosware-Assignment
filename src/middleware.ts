@@ -4,7 +4,7 @@ const isPublicRoute = createRouteMatcher([
   '/sign-in(.*)', 
   '/sign-up(.*)', 
   '/',
-  '/api/uploadthing(.*)'  
+  '/api/uploadthing(.*)'  // Add this line to allow UploadThing routes
 ]);
 
 export default clerkMiddleware((auth, request) => {

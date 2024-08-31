@@ -11,10 +11,6 @@ const LandingPage = () => {
   const { isLoaded, isSignedIn, user } = useUser();
   const [isUploaded, setIsUploaded] = useState(false);
 
-  if (!isLoaded) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <HeroHighlight className="w-full h-full flex flex-col items-center justify-center p-4 relative">
       {isSignedIn && (
@@ -83,7 +79,7 @@ const LandingPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="md:text-2xl lg:text-3xl text-lg text-center mx-auto text-green-600 font-medium"
+            className="text-lg text-green-600 font-medium text-center"
           >
             Thank you for uploading your resume. We'll be in touch soon!
           </motion.p>

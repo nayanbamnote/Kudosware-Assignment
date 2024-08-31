@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# YourHR - Job Search Service
 
-## Getting Started
+YourHR is a job search service designed to help job seekers find ideal job roles based on their qualifications and preferences. This project was developed as part of an assessment for a full stack internship at Kudosware.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The YourHR web application allows job seekers to sign up and submit their resumes. It features a responsive design and secure storage of user information and resumes.
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/) - React framework for building the web application
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
+- [Clerk](https://clerk.com/) - User authentication and management
+- [UploadThing](https://uploadthing.com/) - File upload functionality
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework for styling
+
+## Features
+
+- User signup and authentication
+- Resume upload functionality
+- Responsive design
+- Secure storage of user information and resumes
+
+## Project Structure
+
+```
+yourhr/
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── uploadthing/
+│   │   │       ├── core.ts
+│   │   │       └── route.ts
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   └── LandingPage.tsx
+│   ├── utils/
+│   │   └── uploadthing.ts
+│   └── middleware.ts
+├── public/
+├── .env.local
+├── next.config.js
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup and Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```
+   git clone https://github.com/nayanbamnote/Kudosware-Assignment.git
+   cd yourhr
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-## Learn More
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following variables:
+   ```
+   UPLOADTHING_SECRET=your_uploadthing_secret
+   UPLOADTHING_APP_ID=your_uploadthing_app_id
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+   ```
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+As this is an assessment project, contributions are not currently being accepted. However, feedback and suggestions are always welcome.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Acknowledgements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Kudosware for providing the opportunity and project brief
+- The Next.js, Clerk, and UploadThing communities for their excellent documentation and support
+
+## Contact
+
+For any queries regarding this project, please contact Nayan Bamnote at nareshbamnote52@gamil.com.
